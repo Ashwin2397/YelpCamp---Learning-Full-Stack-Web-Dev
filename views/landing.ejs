@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>YelpCamp</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/stylesheets/land.css">
+    </head>
+    <body>
+        <div class="container">
+            <%if(success && success.length>0){%>
+            <div class="alert alert-success">
+                <%=success%>
+            </div>
+            <% } %>
+            <%if(error && error.length>0){%>
+            <div class="alert alert-danger">
+                <%=error%>
+            </div>
+            <% } %>
+        </div>
+
+
+<div class="container headerC text-center align-middle">
+    <h1 id="headerText"><strong>Welcome to YelpCamp</strong></h1>
+    <a class="btn btn-lg btn-default btn-success" href="/campgrounds">View All Campgrounds</a>
+</div>
+<%- include("partials/footer") %>

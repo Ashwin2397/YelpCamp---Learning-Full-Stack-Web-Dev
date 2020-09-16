@@ -1,0 +1,30 @@
+<%- include("../partials/header") %>
+    
+    <!--If i do not name my inputs, the body will be empty!-->
+    
+    <div class="container">
+        <div class="row">
+            <h1 id="headerz">Add New Comment to <%=campground.name%></h1>
+            
+            <form id="puns" action="/campgrounds/<%=campground._id%>/comments" method="POST">
+                <div class="form-group">
+                    <input class="form-control" type="text" name="comment[text]" placeholder="text">    
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-lg btn-default btn-block btn-primary" type="submit">Submit!</button>
+                </div>
+                 <a href="/campgrounds">Go Back</a>
+            </form>
+        </div>
+        <style> 
+            #puns{
+                width:30%;
+                margin:25px auto; 
+                
+            }
+            #header{
+                text-align:center;
+            }
+        </style>
+    </div>
+<%- include("../partials/footer")%>
